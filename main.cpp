@@ -59,10 +59,10 @@ public:
         
         if (domain_str_.substr(0, rhs.domain_str_.size() + 1) == (rhs.domain_str_ + ".")) {
             return true;
-        }
-       
+        }  
         return false;
     }
+
     string* GetValue () {
         return &domain_str_;
     }
@@ -75,12 +75,7 @@ public:
                                            rhs.domain_str_.begin(), rhs.domain_str_.end());
         
     }
-    bool operator> (const Domain& rhs) const {
-        return !(*this < rhs);
-    }
-    bool operator<= (const Domain& rhs) const {
-        return !(rhs < *this);
-    }
+
    
 
 private:
